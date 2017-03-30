@@ -1,6 +1,6 @@
 # REDIS
 
-### Install:
+### Install
 
 $ brew install redis
 
@@ -8,17 +8,17 @@ $ brew install redis
 
 $ brew services restart redis
 
-### Start Server:
+### Start Server
 
 $ redis-server
 
-### Client:
+### Client
 
 $ redis-cli
 $ redis-cli ping
 $ redis-cli -h {hostname}
 
-### Docker:
+### Docker
 
 $ docker run -d --name myredis redis
 

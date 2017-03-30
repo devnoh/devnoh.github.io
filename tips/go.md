@@ -1,10 +1,11 @@
 # GO
 
 ### Inatall Go with Brew
+
 $ brew install go
 
-
 ### Setup Path for Go 
+
 $ vi ~/.profile
 ~~~
 export GOROOT=/usr/local/opt/go/libexec
