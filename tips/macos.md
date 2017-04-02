@@ -26,7 +26,10 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# Alias
 alias ll='ls -al'
+alias git-devnoh='git config user.name "Sehwan Noh";git config user.email "devnoh@gmail.com"'
+alias git-mirror='git fetch -p origin; git push --mirror'
 ```
 
 ### Install Homebrew
