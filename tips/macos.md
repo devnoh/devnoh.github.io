@@ -30,6 +30,8 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 alias ll='ls -al'
 alias git-devnoh='git config user.name "Sehwan Noh";git config user.email "devnoh@gmail.com"'
 alias git-mirror='git fetch -p origin; git push --mirror'
+#ij /path/to/project/pom.xml
+alias "ij=open -b com.jetbrains.intellij"
 ```
 
 ### Install Homebrew
