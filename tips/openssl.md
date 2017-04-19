@@ -124,6 +124,16 @@ $ openssl rsa -des3 -in unencrypted.key -out encrypted.key
 $ openssl rsa -in encrypted.key -out decrypted.key
 ```
 
+### Convert PEM to DER
+```
+$ openssl rsa -outform der -in domain.pem -out domain.der
+```
+
+### Convert DER to PEM
+```
+$ openssl rsa -inform der -in domain.der -out domain.pem
+```
+
 ## To remove the Bag Attributes (i.e the header part of a cert.pem) 
 ```
 $ openssl x509 -in domain.crt -out domain.crt
