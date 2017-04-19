@@ -57,42 +57,42 @@ openssl req -x509 -new -key domain.key -out domain.crt -days 365
 
 ### View PEM Encoded Certificate
 ```
-$ openssl x509 -in cert.pem -text -noout
-$ openssl x509 -in cert.cer -text -noout
-$ openssl x509 -in cert.crt -text -noout
+$ openssl x509 -in domain.pem -text -noout
+$ openssl x509 -in domain.cer -text -noout
+$ openssl x509 -in domain.crt -text -noout
 ```
 
 ### View DER Encoded Certificate
 ```
-$ openssl x509 -in certificate.der -inform der -text -noout
-$ openssl x509 -in certificate.cer -inform der -text -noout
+$ openssl x509 -in domain.der -inform der -text -noout
+$ openssl x509 -in domain.cer -inform der -text -noout
 ```
 
 ## Convert Certificate Formats
 
 ### Convert x509 to PEM
 ```
-$ openssl x509 -in certificatename.cer -outform PEM -out certificatename.pem
+$ openssl x509 -in domain.cer -outform PEM -out domain.pem
 ```
 
 ### Convert PEM to DER
 ```
-$ openssl x509 -outform der -in certificatename.pem -out certificatename.der
+$ openssl x509 -outform der -in domain.pem -out domain.der
 ```
 
 ### Convert DER to PEM
 ```
-$ openssl x509 -inform der -in certificatename.der -out certificatename.pem
+$ openssl x509 -inform der -in domain.der -out domain.pem
 ```
 
 ### Convert PFX to PEM
 ```
-$ openssl pkcs12 -in certificatename.pfx -out certificatename.pem
+$ openssl pkcs12 -in domain.pfx -out domain.pem
 ```
 
 ### Convert CER and Private Key to PFX (PKCS#12)
 ```
-$ openssl pkcs12 -export -in certificatename.cer -inkey privateKey.key -out certificatename.pfx -certfile  cacert.cer
+$ openssl pkcs12 -export -in domain.cer -inkey private.key -out domain.pfx -certfile cacert.cer
 ```
 
 ## References
