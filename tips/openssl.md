@@ -22,7 +22,7 @@ $ openssl x509 -inform der -in certificatename.der -out certificatename.pem
 $ openssl pkcs12 -in certificatename.pfx -out certificatename.pem
 ```
 
-### Convert CER and Private Key to PFX
+### Convert CER and Private Key to PFX (PKCS#12)
 ```
 $ openssl pkcs12 -export -in certificatename.cer -inkey privateKey.key -out certificatename.pfx -certfile  cacert.cer
 ```
