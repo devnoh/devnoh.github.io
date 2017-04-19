@@ -17,9 +17,11 @@
 
 * **.KEY** The KEY extension is used both for public and private PKCS#8 keys. The keys may be encoded as binary DER or as ASCII PEM.
 
-## How to Create a Self-signed Certificate
+## Generate SSL Certificates
+
+### Generate a Self-signed Certificate
 ```
-$ openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365
+$ openssl req -x509 -newkey rsa:2048 -keyout domain.key -out domain.crt -days 365
 ```
 
 Options:
@@ -46,9 +48,12 @@ when the -x509 option is being used this specifies the number of days to certify
 if this option is specified then if a private key is created it will not be encrypted.
 ```
 
+### Generate a Self-signed Certificate with an Existing Private Key
+```
+openssl req -x509 -new -key domain.key -out domain.crt -days 365
+```       
 
-
-## How to View the Certificate Information
+## View Certificates
 
 ### View PEM Encoded Certificate
 ```
@@ -63,7 +68,7 @@ $ openssl x509 -in certificate.der -inform der -text -noout
 $ openssl x509 -in certificate.cer -inform der -text -noout
 ```
 
-## How to Convert a Certificate into the Appropriate Format
+## Convert Certificate Formats
 
 ### Convert x509 to PEM
 ```
@@ -89,3 +94,6 @@ $ openssl pkcs12 -in certificatename.pfx -out certificatename.pem
 ```
 $ openssl pkcs12 -export -in certificatename.cer -inkey privateKey.key -out certificatename.pfx -certfile  cacert.cer
 ```
+
+## References
+* https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs

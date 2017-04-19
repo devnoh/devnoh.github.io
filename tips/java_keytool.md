@@ -1,9 +1,42 @@
 # JAVA KEYTOOL
 
-## Export the certificate as a file
-
+## Create a new keystore file
 ```
-keytool -export -rfc -keystore keystore.jks -file public.cer
+$ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048
+```
+
+or without interaction:
+```
+$ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048 \
+    -dname "CN=Demo, OU=Backend, O=AutoGrivity, L=Irvine, S=California, C=US" \
+    -storepass password -keypass password
+```    
+
+## View keystore information
+```
+$ keytool -list -v -keystore keystore.jks
+```
+
+## Generate a CSR based on the new keystore
+```
+$ keytool -certreq -alias mydomain -keystore keystore.jks -file mydomain.csr
+```
+
+## Import the root & intermediate certificates into the keystore
+Import the root certificate first, followed by the intermediate. Make sure you specify the correct alias of "root" and "intermediate" respectively.
+```
+$ keytool -import -trustcacerts -alias root -file root.crt -keystore keystore.jks
+$ keytool -import -trustcacerts -alias intermediate -file intermediate.crt -keystore keystore.jks
+```
+
+## Import new certificate into the keystore
+```
+$ keytool -import -trustcacerts -alias mydomain -file mydomain.crt -keystore KeyStore.jks
+```
+
+## Export the certificate as a file
+```
+$ keytool -export -rfc -keystore keystore.jks -file public.cer
 Enter keystore password:  
 
 *****************  WARNING WARNING WARNING  *****************
@@ -16,7 +49,6 @@ Certificate stored in file <public.cer>
 ```
 
 ## Export the certificate as a string
-
 ```
 $ keytool -export -rfc -keystore keystore.jks
 Enter keystore password:  
@@ -51,7 +83,6 @@ r0df1c8mUkuZsXadBjoPyBevdRintm2Qc32wjHT33977zqZQNghd/t5TLuciAXvr
 ```
 
 ## Print the certificate n human-readable form
-
 ```
 $ keytool -printcert -file public.cer
 Owner: CN=Sehwan Noh, OU=Backend, O=AutoGravity, L=Irvine, ST=CA, C=US
