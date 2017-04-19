@@ -54,16 +54,8 @@ $ openssl pkcs12 -in keystore.p12 -nodes -nocerts -out domain.key
 
 ## Export the certificate as a file
 ```
-$ keytool -export -rfc -alias mydomain -keystore keystore.jks -file public.cer
-Enter keystore password:  
-
-*****************  WARNING WARNING WARNING  *****************
-* The integrity of the information stored in your keystore  *
-* has NOT been verified!  In order to verify its integrity, *
-* you must provide your keystore password.                  *
-*****************  WARNING WARNING WARNING  *****************
-
-Certificate stored in file <public.cer>
+$ keytool -export -alias mydomain -keystore keystore.jks -file public.cer
+$ keytool -export -rfc -alias mydomain -keystore keystore.jks -file public.crt
 ```
 
 ## Export the certificate as a string
