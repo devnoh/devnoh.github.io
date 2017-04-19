@@ -21,7 +21,7 @@
 
 ### Generate a Self-signed Certificate
 ```
-$ openssl req -x509 -newkey rsa:2048 -keyout domain.key -out domain.crt -days 365
+$ openssl req -x509 -newkey rsa:2048 -keyout domain.key -out domain.crt -days 365 -nodes
 ```
 
 Options:
@@ -93,6 +93,35 @@ $ openssl pkcs12 -in domain.pfx -out domain.pem
 ### Convert CER and Private Key to PFX (PKCS#12)
 ```
 $ openssl pkcs12 -export -in domain.cer -inkey private.key -out domain.pfx -certfile cacert.cer
+```
+
+## Private Keys
+
+### Create a Private Key
+```
+$ openssl genrsa -des3 -out domain.key 2048
+```
+
+## Verify a Private Key
+```
+$ openssl rsa -check -in domain.key
+```
+
+### Verify a Private Key Matches a Certificate and CSR
+```
+$ openssl rsa -noout -modulus -in domain.key | openssl md5
+$ openssl x509 -noout -modulus -in domain.crt | openssl md5
+$ openssl req -noout -modulus -in domain.csr | openssl md5
+```
+
+### Encrypt a Private Key
+```
+$ openssl rsa -des3 -in unencrypted.key -out encrypted.key
+```
+
+### Decrypt a Private Key
+```
+$ openssl rsa -in encrypted.key -out decrypted.key
 ```
 
 ## References
