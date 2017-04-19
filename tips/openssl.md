@@ -124,5 +124,11 @@ $ openssl rsa -des3 -in unencrypted.key -out encrypted.key
 $ openssl rsa -in encrypted.key -out decrypted.key
 ```
 
+## To remove the Bag Attributes
+```
+$ openssl x509 -in domain.crt -out domainout.crt
+$ openssl rsa -in domain.key -out domainout.key
+```
+
 ## References
 * https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs

@@ -34,6 +34,24 @@ $ keytool -import -trustcacerts -alias intermediate -file intermediate.crt -keys
 $ keytool -import -trustcacerts -alias mydomain -file mydomain.crt -keystore KeyStore.jks
 ```
 
+## Export the private key from the keystore
+
+Export from keytool's proprietary format (called "JKS") to standardized format PKCS #12:
+```
+$ keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.p12 \
+    -deststoretype PKCS12 -srcalias mydomain -deststorepass password -destkeypass password
+```
+
+Export certificate using openssl:
+```
+$ openssl pkcs12 -in keystore.p12 -nokeys -out domain.crt
+```
+
+Export unencrypted private key:
+```
+$ openssl pkcs12 -in keystore.p12 -nodes -nocerts -out domain.key
+```
+
 ## Export the certificate as a file
 ```
 $ keytool -export -rfc -alias mydomain -keystore keystore.jks -file public.cer
