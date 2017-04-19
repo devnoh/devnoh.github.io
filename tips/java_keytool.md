@@ -36,7 +36,7 @@ $ keytool -import -trustcacerts -alias mydomain -file mydomain.crt -keystore Key
 
 ## Export the certificate as a file
 ```
-$ keytool -export -rfc -keystore keystore.jks -file public.cer
+$ keytool -export -rfc -alias mydomain -keystore keystore.jks -file public.cer
 Enter keystore password:  
 
 *****************  WARNING WARNING WARNING  *****************
@@ -50,7 +50,7 @@ Certificate stored in file <public.cer>
 
 ## Export the certificate as a string
 ```
-$ keytool -export -rfc -keystore keystore.jks
+$ keytool -export -rfc -alias mydomain -keystore keystore.jks
 Enter keystore password:  
 
 *****************  WARNING WARNING WARNING  *****************
