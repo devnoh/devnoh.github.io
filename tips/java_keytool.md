@@ -2,12 +2,12 @@
 
 ## Create a new keystore file
 ```
-$ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048
+$ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048 -validity 3650
 ```
 
 or without interaction:
 ```
-$ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048 \
+$ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048 -validity 3650 \
     -dname "CN=Demo, OU=Backend, O=AutoGrivity, L=Irvine, S=California, C=US" \
     -storepass password -keypass password
 ```    
@@ -31,7 +31,7 @@ $ keytool -import -trustcacerts -alias intermediate -file intermediate.crt -keys
 
 ## Import new certificate into the keystore
 ```
-$ keytool -import -trustcacerts -alias mydomain -file mydomain.crt -keystore KeyStore.jks
+$ keytool -import -trustcacerts -alias mydomain -file mydomain.crt -keystore keystore.jks
 ```
 
 ## Export the private key from the keystore
