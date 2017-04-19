@@ -126,8 +126,8 @@ $ openssl rsa -in encrypted.key -out decrypted.key
 
 ## To remove the Bag Attributes (i.e the header part of a cert.pem) 
 ```
-$ openssl x509 -in domain.crt -out domainout.crt
-$ openssl rsa -in domain.key -out domainout.key
+$ openssl x509 -in domain.crt -out domain.crt
+$ openssl rsa -in domain.key -out domain.key
 ```
 
 ## References
