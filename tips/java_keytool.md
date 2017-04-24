@@ -120,7 +120,7 @@ KeyIdentifier [
 ## Change Keystore Password or Key's Password
 ```
 $ keytool -storepasswd -keystore keystore.jks
-$ keytool -keypasswd  -alias <key_name> -keystore keystore.jks
+$ keytool -keypasswd  -keystore keystore.jks -alias <alias_name> 
 ```
 
 ## References
