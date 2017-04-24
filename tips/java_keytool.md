@@ -117,5 +117,11 @@ KeyIdentifier [
 ]
 ```
 
+## Change Keystore Password or Key's Password
+```
+$ keytool -storepasswd -keystore keystore.jks
+$ keytool -keypasswd  -alias <key_name> -keystore keystore.jks
+```
+
 ## References
 * http://keystore-explorer.org/
