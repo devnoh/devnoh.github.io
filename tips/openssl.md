@@ -134,7 +134,14 @@ $ openssl rsa -outform der -in domain.pem -out domain.der
 $ openssl rsa -inform der -in domain.der -out domain.pem
 ```
 
-## To remove the Bag Attributes (i.e the header part of a cert.pem) 
+## Extract Public Key from Certificate
+```
+$ openssl x509 -inform der -in domain.cer -pubkey -noout > public_key.pem
+or 
+$ openssl x509 -in domain.crt -pubkey -noout > public_key.pem
+```
+
+## Remove the Bag Attributes (i.e the header part of a cert.pem) 
 ```
 $ openssl x509 -in domain.crt -out domain.crt
 $ openssl rsa -in domain.key -out domain.key
