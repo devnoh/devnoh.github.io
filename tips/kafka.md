@@ -2,8 +2,8 @@
 
 ### Basic
 ```
-$ tar zxvf kafka_2.11-0.10.1.1.tgz
-$ cd kafka_2.11-0.10.1.1
+$ tar zxvf kafka_2.12-0.10.2.1.tgz
+$ cd kafka_2.12-0.10.2.1
 ```
 
 Start Zookeeper Server:
@@ -19,6 +19,11 @@ $ bin/kafka-server-start.sh config/server.properties
 Create Topic:
 ```
 $ bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic MyFirstTopic --partitions 2 --replication-factor 1
+```
+
+Delete Topic:
+```
+$ bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic MyFirstTopic
 ```
 
 Create Console Producer:
