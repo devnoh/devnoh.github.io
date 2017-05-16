@@ -61,3 +61,39 @@ $ docker run -t -p 61616:61616 -p 8161:8161 webcenter/activemq
 ```
 $ docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret -d mysql:5.6
 ```
+
+## Docker Compose
+
+
+## Docker Machine
+
+### Create
+```
+$ docker-machine create --driver virtualbox --virtualbox-memory 4000 default
+```
+
+### List
+```
+$ docker-machine ls
+```
+
+### Get the environment
+```
+$ docker-machine env default
+```
+
+### Connect the shell(terminal) to the new machine
+```
+$ eval "$(docker-machine env default)"
+```
+
+### Start / Stop
+```
+$ docker-machine stop default
+$ docker-machine start default
+```
+
+### Remove
+```
+$ docker-machine rm default
+```
