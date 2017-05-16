@@ -18,13 +18,18 @@ PATH=$PATH:/usr/local/kibana/bin
 PATH=$PATH:/usr/local/logstash/bin
 export PATH
 
-# Spark
-export SPARK_HOME="/usr/local/spark"
-
 # Go
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# Spark
+export SPARK_HOME="/usr/local/spark"
+
+# Kafka
+export KAFKA_HOME="/usr/local/kafka"
+alias zkstart='$KAFKA_HOME/bin/zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties'
+alias kfstart='$KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties'
 
 # Alias
 alias ll='ls -al'
