@@ -13,7 +13,7 @@
 @EnableRetry
 ```
 
-3. Usage with @Retryable Anotation (Method Level)
+3. Usage with @Retryable Annotation (Method Level)
 
 ```
 // Try 3 times (2 times after first try) with interval 5 seconds.
