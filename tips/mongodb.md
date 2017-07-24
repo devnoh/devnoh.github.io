@@ -19,4 +19,8 @@ $ mongo --port 27017 -u "admin" -p "admin" --authenticationDatabase "admin"
 
 > db.getCollection('inventory').aggregate({$group: {_id : {extColor : '$vehicleData.VehicleInfo.ExteriorColor', genericExtColor:'$vehicleData.VehicleInfo.GenericExteriorColor'}, number:  { $sum : 1} }} )
 
+> db.getCollection('icc_inventory').find({"vehicleData.VehicleInfo.ExteriorColor":{$eq:''}}).count()
 > db.getCollection('icc_inventory').find({"vehicleData.VehicleInfo.ChromeStyleID":{$gt:-1}}).count()
+
+> db.getCollection('vehicle_description').distinct("vin").length;
+> db.getCollection('vehicle_description').find({"rawData.exteriorColor":{ $size: 0 }})
