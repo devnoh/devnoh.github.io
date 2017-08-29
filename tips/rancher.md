@@ -1,4 +1,5 @@
 # RANCHER
 
 ## Launching Management Server 
-docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+$ sudo docker run -d --restart=unless-stopped -p 9090:8080 rancher/server
+
