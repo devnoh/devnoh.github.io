@@ -37,3 +37,40 @@ $ brew install kotlin
 * Corutines
 * ...
 
+-------------------
+
+## Kotlin
+
+* Runs anywhere the JVM can run
+* Statically typed
+* Objected-oriented
+* Functional programming
+
+## Guiding Principles
+
+* Conciseness
+* Safety
+* Pragmatism
+* Interoperability
+
+## Quick Differences Between Kotlin and Java
+
+* var (mutable)
+* val (immutable)
+* no semicolon(;)
+* [] for collections
+* type alias
+* String.length is a property
+* no ternary operator
+* no for-loop
+* == is structurally equal (structural equality; equals())
+* === is referentially equal (referential equality; == in Java)
+* != is structurally not equal
+* !== is referentially not equal
+* and (instead of &)
+* or (instead of |)
+* is or !is (instead of instanceOf)
+* cast using 'as'
+* smart casting
+* $ in string template
+* """ for raw string
