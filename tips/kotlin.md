@@ -71,6 +71,7 @@ $ brew install kotlin
 * or (instead of |)
 * is or !is (instead of instanceOf)
 * cast using 'as'
+* Any is the root class
 * smart casting
 * $ in string template
 * """ for raw string
