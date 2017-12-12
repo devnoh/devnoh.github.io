@@ -4,6 +4,10 @@
 
 $ brew install kotlin
 
+## Kotlin REPL
+
+$ kotlinc-jvm
+
 ## Language Features
 
 * Static Typing (cf. Groovy is dynamic typed)
