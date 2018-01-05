@@ -107,6 +107,22 @@ $ git push origin :old_branch                 # Delete the old branch
 $ git push --set-upstream origin new_branch   # Push the new branch, set local branch to track the new remote
 ```
 
+## Delete Branch
+
+Remote:
+
+```
+$ git push -d <remote_name> <branch_name>
+$ git branch -d <branch_name>
+```
+
+Local:
+
+```
+$ git branch -d branch_name
+$ git branch -D branch_name
+```
+
 ## Mirror a Git Repository
 
 https://help.github.com/articles/duplicating-a-repository/
