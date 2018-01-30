@@ -112,7 +112,7 @@ $ git push --set-upstream origin new_branch   # Push the new branch, set local b
 Remote:
 
 ```
-$ git push -d <remote_name> <branch_name>
+$ git push -d origin <branch_name>
 $ git branch -d <branch_name>
 ```
 
