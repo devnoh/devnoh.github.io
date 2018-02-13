@@ -123,6 +123,13 @@ $ git branch -d branch_name
 $ git branch -D branch_name
 ```
 
+## Delete Already Merged Branches
+
+```
+$ git branch --merged | egrep -v "(^\*|master|develop)"
+$ git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d
+```
+
 ## Mirror a Git Repository
 
 https://help.github.com/articles/duplicating-a-repository/
@@ -149,5 +156,3 @@ To update your mirror, fetch updates and push.
 $ git fetch -p origin
 $ git push --mirror
 ```
-
-
