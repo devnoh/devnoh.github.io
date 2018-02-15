@@ -128,6 +128,7 @@ $ git branch -D branch_name
 ```
 $ git branch --merged | egrep -v "(^\*|master|develop)"
 $ git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d
+$ git branch -r --merged | grep -v '\*\|master\|develop' | sed 's/origin\///' | xargs -n 1 git push --delete origin
 ```
 
 ## Mirror a Git Repository
