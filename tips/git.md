@@ -113,7 +113,7 @@ Remote:
 
 ```
 $ git push -d origin <branch_name>
-$ git branch -d <branch_name>
+$ git branch -D <branch_name>
 ```
 
 Local:
