@@ -44,3 +44,9 @@ alias "ij=open -b com.jetbrains.intellij"
 ```
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
+### Common Dev Tools
+
+```
+$ brew install mongodb
+$ brew install node
