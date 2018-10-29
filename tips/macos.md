@@ -48,5 +48,13 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 ### Common Dev Tools
 
 ```
-$ brew install mongodb
+$ brew install maven
+$ brew install gradle
+$ brew install kotlin
+$ brew install scala
+$ brew install python
+$ brew install go
 $ brew install node
+$ brew install httpie
+$ brew install mongodb
+$ brew install mysql
