@@ -6,7 +6,7 @@
 $ brew install activemq
 ```
 
-### Start Redis as a Service
+### Start as a Service
 
 ```
 $ brew services restart activemq
