@@ -3,8 +3,12 @@
 ### Install
 
 $ brew install node
-
 $ brew upgrade node
+
+#### Install the previous version
+
+$ brew install node@8
+$ brew link node@8
 
 ### NPM
 
