@@ -3,7 +3,7 @@
 ## Install
 
 ```
-$ brew install elasticsearch$ 
+$ brew install elasticsearch
 $ brew services start elasticsearch
 ```
 
