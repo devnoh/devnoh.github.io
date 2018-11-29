@@ -47,3 +47,10 @@ $ curl -H "Content-Type: application/json" -XGET '127.0.0.1:9200/shakespeare/_se
   }
 }'
 ```
+
+## The Elastic Stack
+
+* Elasticsearch
+* Kibana
+* Logstash / Beats
+* X-Pack
