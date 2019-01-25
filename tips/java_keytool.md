@@ -8,7 +8,7 @@ $ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 20
 or without interaction:
 ```
 $ keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048 -validity 3650 \
-    -dname "CN=Demo, OU=Backend, O=AutoGrivity, L=Irvine, S=California, C=US" \
+    -dname "CN=AG, OU=Engineering, O=AutoGrivity, L=Irvine, S=California, C=US" \
     -storepass password -keypass password
 ```    
 
@@ -120,7 +120,12 @@ KeyIdentifier [
 ## Change Keystore Password or Key's Password
 ```
 $ keytool -storepasswd -keystore keystore.jks
-$ keytool -keypasswd  -keystore keystore.jks -alias <alias_name> 
+$ keytool -keypasswd -keystore keystore.jks -alias <alias_name> 
+```
+
+## How to change a Keystore alias
+```
+$ keytool -changealias -alias "current_alias" -destalias "new_alias" -keystore keystore.jks
 ```
 
 ## References
