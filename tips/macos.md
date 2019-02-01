@@ -60,3 +60,5 @@ $ brew install mongodb
 $ brew install mysql
 $ brew install apache-activemq
 $ brew install rabbitmq
+$ brew install redis
+$ brew install elasticsearch
