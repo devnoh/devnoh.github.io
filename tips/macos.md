@@ -55,6 +55,8 @@ $ brew install scala
 $ brew install python
 $ brew install go
 $ brew install node
+    $ brew install node@8
+    $ brew link node@8
 $ brew install httpie
 $ brew install mongodb
 $ brew install mysql
