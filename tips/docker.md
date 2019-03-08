@@ -64,7 +64,10 @@ $ docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret -d mysql:5.6
 
 ## Docker Compose
 
-
+```
+$ docker-compose up --build
+$ docker-compose down (or docker-compose stop)
+```
 ## Docker Machine
 
 ### Create
