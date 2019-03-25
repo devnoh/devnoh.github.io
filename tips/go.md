@@ -4,7 +4,7 @@
 
 $ brew install go
 
-### Setup Path for Go 
+### Setup Path for Go
 
 $ vi ~/.profile
 ~~~

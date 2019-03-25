@@ -1,4 +1,4 @@
-# MACOS
+# MAC
 
 ### ~/.profile
 
