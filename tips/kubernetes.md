@@ -5,10 +5,16 @@
 $ brew install kubernetes-cli
 $ kubectl version
 
+```
+$ kubectl config view -o \
+  jsonpath='{"\n\033[1mCLUSTER NAME\033[0m\n"}{range .clusters[*]}{.name}{"\n"}{end}'
+```
+
 ## Minikube
 
 $ brew cask install minikube
 $ minikube start
+
 ```
 $ minikube start
 😄  minikube v0.35.0 on darwin (amd64)
