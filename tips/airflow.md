@@ -16,7 +16,7 @@ $ pip install apache-airflow[postgres,s3]
 $ docker pull apache/airflow
 ```
 
-### Quick Start
+## Quick Start
 ```
 # airflow needs a home, ~/airflow is the default,
 # but you can lay foundation somewhere else if you prefer
@@ -37,3 +37,5 @@ airflow scheduler
 
 # visit localhost:8080 in the browser and enable the example dag in the home page
 ```
+
+* http://www.marknagelberg.com/getting-started-with-airflow-using-docker/
