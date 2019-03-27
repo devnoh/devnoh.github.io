@@ -109,3 +109,35 @@ $ docker-machine start default
 ```
 $ docker-machine rm default
 ```
+
+
+## Servers
+
+```
+docker pull mongo
+docker pull mysql
+docker pull postgres
+docker pull neo4j
+docker pull mariadb
+docker pull redis
+docker pull elasticsearch:6.6.2
+docker pull logstash:6.6.2
+docker pull kibana:6.6.2
+docker pull influxdb
+docker pull crate
+docker pull couchbase
+docker pull rabbitmq
+docker pull confluentinc/cp-zookeeper
+docker pull confluentinc/cp-kafka
+docker pull webcenter/activemq
+docker pull openjdk
+docker pull golang
+docker pull python
+docker pull ruby
+docker pull node
+docker pull nginx
+docker pull httpd
+docker pull jenkins
+docker pull tensorflow/tensorflow
+docker pull zookeeper
+```

@@ -43,3 +43,10 @@ $ minikube stop
 ```
 
 $ minikube dashboard
+
+
+## Helm
+
+```
+$ brew install kubernetes-helm
+```
