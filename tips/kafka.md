@@ -79,12 +79,15 @@ Another option is Confluent Enterprise which is a Kafka distribution for product
 
 **Yahoo Kafka Manager**
 Kafka Manager is a tool for monitoring Kafka offering less functionality compared to the aforementioned tools.
+* https://github.com/yahoo/kafka-manager
 
 **KafDrop**
 KafDrop is a UI for monitoring Apache Kafka clusters. The tool displays information such as brokers, topics, partitions, and even lets you view messages. It is a lightweight application that runs on Spring Boot and requires very little configuration.
+* https://github.com/sehwannoh/Kafdrop
 
 **LinkedIn Burrow**
 Burrow is a monitoring companion for Apache Kafka that provides consumer lag checking as a service without the need for specifying thresholds. It monitors committed offsets for all consumers and calculates the status of those consumers on demand. An HTTP endpoint is provided to request status on demand, as well as provide other Kafka cluster information. There are also configurable notifiers that can send status out via email or HTTP calls to another service.
+* https://github.com/linkedin/Burrow
 
 **Kafka Tool**
 Kafka Tool is a GUI application for managing and using Apache Kafka clusters. It provides an intuitive UI that allows one to quickly view objects within a Kafka cluster as well as the messages stored in the topics of the cluster. It contains features geared towards both developers and administrators.
