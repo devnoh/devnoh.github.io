@@ -127,9 +127,10 @@ docker pull influxdb
 docker pull crate
 docker pull couchbase
 docker pull rabbitmq
+docker pull webcenter/activemq
 docker pull confluentinc/cp-zookeeper
 docker pull confluentinc/cp-kafka
-docker pull webcenter/activemq
+docker pull wurstmeister/kafka
 docker pull openjdk
 docker pull golang
 docker pull python
@@ -140,4 +141,5 @@ docker pull httpd
 docker pull jenkins
 docker pull tensorflow/tensorflow
 docker pull zookeeper
+docker pull hasura/graphql-engine
 ```
