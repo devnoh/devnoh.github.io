@@ -111,7 +111,7 @@ $ docker-machine rm default
 ```
 
 
-## Servers
+## DockerHub Containers
 
 ```
 docker pull mongo
@@ -139,7 +139,8 @@ docker pull node
 docker pull nginx
 docker pull httpd
 docker pull jenkins
-docker pull tensorflow/tensorflow
 docker pull zookeeper
 docker pull hasura/graphql-engine
+docker pull tensorflow/tensorflow
+docker pull mesosphere/spark
 ```
