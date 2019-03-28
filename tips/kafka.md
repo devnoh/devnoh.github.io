@@ -93,3 +93,39 @@ Burrow is a monitoring companion for Apache Kafka that provides consumer lag che
 Kafka Tool is a GUI application for managing and using Apache Kafka clusters. It provides an intuitive UI that allows one to quickly view objects within a Kafka cluster as well as the messages stored in the topics of the cluster. It contains features geared towards both developers and administrators.
 
 If you cannot afford licenses, then go for Yahoo Kafka Manager, LinkedIn Burrow or KafDrop. Confluent's and Landoop's products are the best out there, but unfortunately, they require licensing.
+
+
+## Confluent Kafka
+
+* ZooKeeper
+```
+docker run -d \
+--net=host \
+--name=zookeeper \
+-p 32181:32181
+-e ZOOKEEPER_CLIENT_PORT=32181 \
+-e ZOOKEEPER_TICK_TIME=2000 \
+-e ZOOKEEPER_SYNC_LIMIT=2 \
+confluentinc/cp-zookeeper:5.1.2
+```
+or
+```
+docker run --net=host --name=zookeeper -p 32181:32181 -e ZOOKEEPER_CLIENT_PORT=32181 -e ZOOKEEPER_TICK_TIME=2000 -e ZOOKEEPER_SYNC_LIMIT=2 confluentinc/cp-zookeeper:5.1.2
+```
+
+* Kafka
+```
+docker run -d \
+--net=host \
+--name=kafka \
+-p 29092:29092
+-e KAFKA_ZOOKEEPER_CONNECT=localhost:32181 \
+-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:29092 \
+-e KAFKA_BROKER_ID=2 \
+-e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
+confluentinc/cp-kafka:5.1.2
+```
+or
+```
+docker run --net=host --name=kafka -p 29092:29092 -e KAFKA_ZOOKEEPER_CONNECT=localhost:32181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:29092 -e KAFKA_BROKER_ID=2 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 confluentinc/cp-kafka:5.1.2
+```

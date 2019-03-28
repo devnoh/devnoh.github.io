@@ -130,6 +130,7 @@ docker pull rabbitmq
 docker pull webcenter/activemq
 docker pull confluentinc/cp-zookeeper
 docker pull confluentinc/cp-kafka
+docker pull wurstmeister/zookeeper
 docker pull wurstmeister/kafka
 docker pull openjdk
 docker pull golang
