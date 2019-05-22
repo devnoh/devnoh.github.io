@@ -6,6 +6,13 @@ Using Homebrew:
 ```
 $ brew install elasticsearch
 $ brew services start elasticsearch
+$ brew services stop elasticsearch
+```
+
+```
+$ brew install elasticsearch@5.6
+$ brew services start elasticsearch@5.6
+$ brew services stop elasticsearch@5.6
 ```
 
 Using Docker:
@@ -14,6 +21,9 @@ $ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e “discovery.t
 ```
 
 http://localhost:9200/
+
+* List All Indices
+http://localhost:9200/_cat/indices
 
 ## Samples
 ```
