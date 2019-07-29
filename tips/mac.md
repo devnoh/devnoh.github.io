@@ -39,6 +39,13 @@ alias git-mirror='git fetch -p origin; git push --mirror'
 alias "ij=open -b com.jetbrains.intellij"
 ```
 
+### Hostname
+```
+sudo scutil --set ComputerName "newname"
+sudo scutil --set LocalHostName "newname"
+sudo scutil --set HostName "newname"
+```
+
 ### Install Homebrew
 
 ```
