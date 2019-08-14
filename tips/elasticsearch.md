@@ -70,3 +70,23 @@ $ curl -H "Content-Type: application/json" -XGET '127.0.0.1:9200/shakespeare/_se
 * Kibana
 * Logstash / Beats
 * X-Pack
+
+
+## Sample Queries
+
+POST https://localhost:9200/inventory/_search
+POST https://localhost:9200/inventory/_delete_by_query
+
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "type": "XYZ"
+          }
+        }
+      ]
+    }
+  }
+}
