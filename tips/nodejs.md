@@ -10,6 +10,9 @@ $ brew upgrade node
 $ brew install node@8
 $ brew link node@8
 
+$ brew unlink node@8
+$ brew uninstall node@8
+
 ### NPM
 
 $ npm init

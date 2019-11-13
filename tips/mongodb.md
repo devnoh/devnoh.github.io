@@ -37,3 +37,14 @@ $ mongo --port 27017 -u "admin" -p "admin" --authenticationDatabase "admin"
 > db.getCollection('vehicle_description').distinct("vin").length;
 > db.getCollection('vehicle_description').find({"rawData.exteriorColor":{ $size: 0 }})
 
+
+## mongodb-community
+
+mongodb was removed from brew, so you should do the following:
+
+$ brew services stop mongodb
+$ brew uninstall mongodb
+
+$ brew tap mongodb/brew
+$ brew install mongodb-community
+$ brew services start mongodb-community
