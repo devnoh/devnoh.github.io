@@ -1,9 +1,19 @@
 # PYTHON
 
-### Install
+## Install
 
-$ brew install python
+```
+brew install python
+```
 
-or
+```
+ls -l /usr/local/bin/python*
+```
 
-$ brew install python3
+```
+ln -s -f /usr/local/bin/python3.7 /usr/local/bin/python
+```
+
+```
+python --version
+```
