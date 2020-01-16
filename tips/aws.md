@@ -3,7 +3,7 @@
 
 ## AWS CLI
 
-### Installation
+### Install
 
 https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 
@@ -16,7 +16,7 @@ Update PATH (.bash_profile)
 export PATH=$PATH:~/Library/Python/3.7/bin
 ```
 
-### Configuration
+### Configure
 
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
 
@@ -42,4 +42,31 @@ Default output format [None]: text
 
 ```
 $ aws s3 ls --profile produser
+```
+
+## AWS SAM CLI
+
+### Install
+
+```
+brew tap aws/tap
+brew install aws-sam-cli
+```
+
+```
+sam --version
+```
+
+### Build & Deploy
+
+```
+#Step 1 - Download a sample application
+sam init
+
+#Step 2 - Build your application
+cd sam-app
+sam build
+
+#Step 3 - Deploy your application
+sam deploy --guided
 ```
