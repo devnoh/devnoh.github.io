@@ -1,4 +1,4 @@
-# MONGODB
+# MongoDB
 
 ## Inatllation
 
