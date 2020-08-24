@@ -27,8 +27,8 @@ http://localhost:9200/_cat/indices
 
 ## Samples
 ```
-http://media.sundog-soft.com/es6/shakes-mapping.json
-http://media.sundog-soft.com/es6/shakespeare_6.0.json
+$ wget http://media.sundog-soft.com/es6/shakes-mapping.json
+$ wget http://media.sundog-soft.com/es6/shakespeare_6.0.json
 ```
 
 $ http PUT localhost:9200/shakespeare < shakes-mapping.json
@@ -90,3 +90,34 @@ POST https://localhost:9200/inventory/_delete_by_query
     }
   }
 }
+
+
+
+## Others
+
+https://www.elastic.co/guide/en/kibana/current/tutorial-build-dashboard.html
+
+
+```
+curl -O https://download.elastic.co/demos/kibana/gettingstarted/8.x/shakespeare.json
+
+curl -X PUT "localhost:9200/shakespeare?pretty" -H 'Content-Type: application/json' -d'
+{
+  "mappings": {
+    "properties": {
+    "speaker": {"type": "keyword"},
+    "play_name": {"type": "keyword"},
+    "line_id": {"type": "integer"},
+    "speech_number": {"type": "integer"}
+    }
+  }
+}
+'
+
+curl -u elastic -H 'Content-Type: application/x-ndjson' -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare.json
+
+
+http://localhost:9200/_cat/indices?v&pretty
+http://localhost:9200/shakespeare/_search?q=play_name:%22Henry%20IV%22
+
+```
