@@ -116,8 +116,7 @@ curl -X PUT "localhost:9200/shakespeare?pretty" -H 'Content-Type: application/js
 
 curl -u elastic -H 'Content-Type: application/x-ndjson' -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare.json
 
+```
 
 http://localhost:9200/_cat/indices?v&pretty
 http://localhost:9200/shakespeare/_search?q=play_name:%22Henry%20IV%22
-
-```
