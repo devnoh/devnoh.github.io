@@ -18,3 +18,11 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 $ brew install dep
 $ brew upgrade dep
 ~~~
+
+
+### Go Get
+
+```
+ go get -u all
+ go get -u github.vianttech.com/adelphic/adelphic-go/models
+ ```
