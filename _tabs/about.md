@@ -11,11 +11,11 @@ who has extensive experience in the full life cycle of the software development 
 including requirements analysis, prototyping, proof of concept, interface design,
 implementation, testing, automation, and maintenance.
 
-Specialties:
+<b>Specialties:</b>
 Java/JEE, Go, JavaScript/Node.js, C#/.NET, C/C++, Objective-C, Shell Scripting,
 SOAP/REST API, gRPC, OOAD, Database Modeling, Android, iOS, Amazon Web Services (AWS),
 Google Cloud Platform (GCP)
 
-Interests:
+<b>Interests:</b>
 Distributed Systems, Cloud Computing, Serverless Microservices, Big Data Processing,
 Software Testing, Crypto & Blockchain, Internet of Things, Camping, Hiking, Fishing
